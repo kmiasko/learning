@@ -16,6 +16,7 @@ body {
     height: 50px;
     line-height: 50px;
     vertical-align: middle;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
 .navbar .brand {
@@ -29,7 +30,7 @@ body {
 }
 
 .navbar .brand:hover,
-.navbar .brand:focus, {
+.navbar .brand:focus {
     color: #F2FFD2;
 }
 
