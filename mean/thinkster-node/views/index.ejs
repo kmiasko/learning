@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+    <script src="/javascripts/angularApp.js"></script>
+  </head>
+  <body ng-app="flapperNews">
+    <script type="text/ng-template" id="/home.html">
+      <div class="page-header">
+        <h1>Flapper News</h1>
+      </div>
+      <form ng-submit="main.addPost()">
+        <input id="" placeholder="Title" type="text" ng-model="main.title" />
+        <input id="" placeholder="Link" type="text" ng-model="main.link" />
+        <button type="submit">Add Post</button>
+      </form>
+      <div ng-repeat="post in main.posts | orderBy: '-upvotes' ">
+        <a ng-show="post.link" href="{{ post.link }}">{{ post.title }}</a>
+        <span ng-hide="post.link">{{ post.title }}</span>
+        <span>upvotes: {{ post.upvotes }}</span>
+        <span ng-click="main.incrementUpvotes(post)">+</span>
+        <a href="#/posts/{{post._id}}">Comments</a>
+      </div>
+    </script>
+    <script type="text/ng-template" id="/posts.html">
+      <div class="page-header">
+        <h3>
+          <a href="{{ postCtrl.post.link }}" ng-show="postCtrl.post.link" postCtrl.post.link="">{{postCtrl.post.title}}</a>
+          <span ng-hide="postCtrl.post.link">{{postCtrl.post.title}}</span>
+        </h3>
+      </div>
+      <div ng-repeat="comment in postCtrl.post.comments | orderBy:'-upvotes'">
+        <span ng-click="postCtrl.incrementUpvotes(comment)">+</span>
+        {{comment.upvotes}} - by {{comment.author}}
+        <br>
+        {{comment.body}}
+      </div>
+  <form ng-submit="postCtrl.addComment()"
+    style="margin-top:30px;">
+    <h3>Add a new comment</h3>
+
+    <div class="form-group">
+      <input type="text"
+      class="form-control"
+      placeholder="Comment"
+      ng-model="postCtrl.body"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Post</button>
+  </form>
+    </script>
+    <ui-view></ui-view>
+  </body>
+</html>
