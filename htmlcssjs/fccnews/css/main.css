@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+/**
+ *  For modern browsers
+ */
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 (trigger hasLayout)
+ */
+.cf {
+  *zoom: 1;
+}
+
+body {
+  font: 100% "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper a {
+  display: block;
+  color: #333;
+}
+
+.wrapper a:hover {
+  cursor: pointer;
+  background: #ddd;
+}
+
+.wrapper a:hover,
+.wrapper a:active,
+.wrapper a:clicked {
+  color: #333;
+}
+
+h1 {
+  font: 3em "Indie Flower", cursive;
+}
+
+h2 {
+  font: 2em "Indie Flower", cursive;
+  margin-bottom: 50px;
+}
+
+.news {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.item-defaults {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 0;
+      -ms-flex: 0 0 0;
+          flex: 0 0 0;
+  min-width: 12.5em;
+  padding: 0.5em;
+  border-radius: 5px;
+  box-shadow: 2px 1px 10px 0px #333333;
+}
+
+.item {
+  margin: 1em;
+  border: 1px solid #bbb;
+}
+.item img {
+  display: block;
+  width: 100%;
+}
+.item .desc,
+.item .comment,
+.item .author {
+  font-size: 0.85em;
+}
+.item .desc {
+  padding: 1em 1em;
+  height: 7em;
+  overflow: hidden;
+}
+.item .comment {
+  float: left;
+  padding: 0.5em 0 1em 0.5em;
+}
+.item .author {
+  float: right;
+  padding: 0.5em 0.5em 0em 0em;
+}
+
+@media all and (max-width: 42.5em) {
+  .item-defaults {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+            flex: 1 0 0;
+    padding: 1em;
+    border-radius: 10px;
+  }
+
+  .item .desc,
+  .item .comment,
+  .item .author {
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wikipedia Search</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Indie+Flower">
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="newsListApp">
+<div class="wrapper" >
+<h1>Free Code Camp</h1>
+<h2>Camper News</h2>
+
+  <div class="news" ng-controller="NewsListController">
+    <a class="item-defaults item" ng-repeat="item in stories" href="{{ item.link }}" target="_blank">
+      <img ng-src="{{ item.author.picture }}" alt="News Logo" />
+      <p class="desc">{{ item.headline }}</p>
+      <p class="comment">{{ item.comments.length }} comm</p>
+      <p class="author">{{ item.author.username }}</p>
+    </a>
+  </div>
+  </div>
+
+</div>
+<body>
+    <script src="js/angular.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
