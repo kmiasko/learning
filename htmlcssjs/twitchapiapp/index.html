@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wikipedia Search</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,300,700">
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<body ng-app="twitterApp">
+  <div class="container" ng-controller="userListController">
+    <div class="tabs">
+      <ul>
+        <li>
+          <a id='all' class="active" href="#" ng-click="all_s($event);">All</a><li>
+        <li><a id='online' class="middle" href="#" ng-click="online($event);">Online</a></li>
+        <li><a id='offline' href="#" ng-click="offline($event);">Offline</a></li>
+        </li>
+      </ul>
+    </div>
+    <div class="search">
+      <input type="text" ng-model="searchModel"/>
+    </div>
+    <div class="users" ng-repeat="stream in streams |  filter:searchModel">
+      <div class="user clearfix">
+        <div class="avatar">
+          <img ng-src="{{ stream.logo == null ? 'http://placehold.it/50x50' : stream.logo }}" alt="Logo" />
+        </div>
+        <div class="description">
+          <p class="name"><a href="{{ stream.url }}" target="_blank">{{ stream.display_name }}</a>
+            </p>
+              <p class="desc">{{ stream.online == true ? stream.status : '' }}</p>
+        </div>
+        <div class="icon"><i class="fa {{ stream.online == false ? 'fa-exclamation' : 'fa-video-camera' }}"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
