@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 100% "Lato", sans-serif;
+  background: #3d3e44;
+  color: #ffffff;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+h1, h2, h3, h4 {
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+.center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 6em;
+}
+
+.top {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  min-height: 6em;
+}
+
+.wrapper {
+  width: 25em;
+  min-height: 6em;
+  text-align: center;
+}
+
+.searchBox p {
+  padding: 10px;
+  font-size: 0.9em;
+}
+
+.custom-icon {
+  font-size: 4em;
+  color: #7b9ccc;
+}
+
+.custom-icon:hover {
+  cursor: pointer;
+}
+
+.hide {
+  position: absolute;
+  left: -10000px;
+}
+
+.searchInput {
+  background: #3d3e44;
+  color: #dbdbdb;
+  border: 5px solid #7b9ccc;
+  border-radius: 20px;
+  width: 0em;
+  padding: 5px 10px;
+  font-size: 1em;
+  -webkit-transition: width 1s ease-out 0s;
+          transition: width 1s ease-out 0s;
+  outline: none;
+}
+
+.searchInput-show {
+  width: 20em;
+}
+
+.icon-close {
+  position: absolute;
+  right: 3.5em;
+  top: 0.7em;
+  color: #7b9ccc;
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-in 0.5s;
+          transition: opacity 1s ease-in 0.5s;
+}
+
+.icon-close-show {
+  opacity: 1;
+}
+
+.icon-close:hover {
+  cursor: pointer;
+}
+
+.wikiList {
+  width: 80%;
+  margin: 15em auto;
+}
+
+.wikis {
+  margin-left: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+.wikis a {
+  text-decoration: none;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  background: #dbdbdb;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.item:hover {
+  box-shadow: -8px 0px 0px 0px #c8f463;
+}
+.item h4 {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+
+.extext {
+  color: #3d3e44;
+  padding-bottom: 0.5em;
+}
+
+.title {
+  color: #7b9ccc;
+  font-weight: bold;
+}
