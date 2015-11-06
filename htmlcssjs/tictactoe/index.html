@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wikipedia Search</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="twitterApp">
+<div class="container">
+  <div class="result">
+    <p></p>
+    <p><i></i></p>
+  </div>
+  <div class="tictactoe">
+    <ul class="ttt">
+      <li class="field" data-move='0'><i></i></li>
+      <li class="field" data-move='1'><i></i></li>
+      <li class="field" data-move='2'><i></i></li>
+      <li class="field" data-move='3'><i></i></li>
+      <li class="field" data-move='4'><i></i></li>
+      <li class="field" data-move='5'><i></i></li>
+      <li class="field" data-move='6'><i></i></li>
+      <li class="field" data-move='7'><i></i></li>
+      <li class="field" data-move='8'><i></i></li>
+    </ul>
+  </div>
+  <div class="playerChoose">
+    <p class="computer" data-player="0"><i class="fa fa-laptop"></i><span>Computer starts</span></p>
+    <p class="player" data-player="1"><i class="fa fa-user"></i><span>Human starts</span></p>
+  </div>
+</div>
+</body>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

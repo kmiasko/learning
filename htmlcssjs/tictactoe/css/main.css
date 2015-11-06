@@ -1,0 +1,107 @@
+body {
+  font: 100% Roboto, sans-serif;
+  box-sizing: border-box;
+  background: #A7DBD8;
+}
+
+.center, .container, .result {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.container {
+  width: 25rem;
+  height: 25rem;
+}
+
+.result {
+  background: #83ccc8;
+  background: rgba(131, 204, 200, 0.7);
+  opacity: 0;
+  z-index: 1;
+  visibility: hidden;
+}
+.result p {
+  padding-top: calc(50% - 2*3rem);
+  font-size: 3rem;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.ttt {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+.ttt .field {
+  color: #F38630;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: center;
+  vertical-align: middle;
+  width: 8.2rem;
+  height: 8.3rem;
+  font-size: 7rem;
+  line-height: 8.3rem;
+}
+.ttt li:nth-child(3n+1) {
+  border-right: 1px solid #F38630;
+}
+.ttt li:nth-child(3n+3) {
+  border-left: 1px solid #F38630;
+}
+.ttt li:nth-child(-n+6) {
+  border-bottom: 1px solid #F38630;
+}
+.ttt li:hover {
+  background: #aededb;
+}
+
+.playerChoose {
+  width: 100%;
+  padding-top: 3rem;
+  color: #FA6900;
+}
+.playerChoose p {
+  text-align: center;
+}
+.playerChoose p:hover {
+  color: #ffa361;
+  cursor: pointer;
+}
+.playerChoose .computer {
+  float: left;
+}
+.playerChoose .player {
+  float: right;
+}
+.playerChoose i {
+  display: block;
+  font-size: 3rem;
+}
+.playerChoose p span {
+  display: block;
+  font-size: 1.2rem;
+}
