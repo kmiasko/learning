@@ -1,4 +1,4 @@
-var app = angular.module('twitterApp', []);
+var app = angular.module('twitchApp', []);
 
 app.controller('userListController', function($scope, $http, $q) {
 
